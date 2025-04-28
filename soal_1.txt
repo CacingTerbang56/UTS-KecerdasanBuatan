@@ -1,0 +1,63 @@
+LOGIKA PROPOSIAONAL
+
+Asumsikan:
+
+G1 = daun_menguning
+
+G2 = bercak_hitam
+
+G3 = daun_berlubang
+
+G4 = tanaman_layu
+
+Aturan:
+
+G1 ∧ G2 ∧ ¬G4 → Penyakit = Hawar Daun
+
+G1 ∧ G4 ∧ ¬G2 → Penyakit = Fusarium
+
+G3 ∧ G4 → Hama = Ulat Daun
+
+G2 ∧ G4 ∧ ¬G1 → Penyakit = Antraknosa
+
+G1 ∧ G2 ∧ G4 → Hama = Thrips
+
+¬G1 ∧ ¬G2 ∧ ¬G3 ∧ ¬G4 → Tanaman Sehat
+
+Else → Tidak diketahui
+
+PSEUDOCODE
+
+START
+  Tanyakan 4 gejala ke pengguna:
+    - daun menguning?
+    - bercak hitam?
+    - daun berlubang?
+    - tanaman layu?
+
+  Simpan jawaban sebagai variabel boolean
+
+  IF daun menguning AND bercak hitam AND NOT tanaman layu:
+    Cetak "Hawar daun"
+
+  ELSE IF daun menguning AND tanaman layu AND NOT bercak hitam:
+    Cetak "Fusarium"
+
+  ELSE IF daun berlubang AND tanaman layu:
+    Cetak "Ulat daun"
+
+  ELSE IF bercak hitam AND tanaman layu AND NOT daun menguning:
+    Cetak "Antraknosa"
+
+  ELSE IF daun menguning AND tanaman layu AND bercak hitam:
+    Cetak "Thrips"
+
+  ELSE IF semua gejala = FALSE:
+    Cetak "Tanaman sehat"
+
+ALUR INTERFERENSI INPUT -> OUTPUT
+
+sistem akan menanyakan gejala tanaman
+sistem akan mencocokan input dengan aturan misal G1 ∧ G2 ∧ ¬G4
+Karena kedua gejala ditemukan, sistem menginferensikan: hawar daun
+outputnya tanaman anda terserang hawar daun
